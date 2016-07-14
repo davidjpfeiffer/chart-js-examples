@@ -203,7 +203,7 @@ canvas {
 
 .main-content {
   text-align: center;
-  max-width: 1200px;
+  max-width: 800px;
 }
 
 @media screen and (min-width: 64em) {
