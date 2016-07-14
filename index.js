@@ -2,7 +2,8 @@ var randomScalingFactor = function() {
 	return Math.round(Math.random() * 100)
 };
 
-var barGraphData = 
+var barGraphData;
+
 app.httpService.get('barGraphData.json').then(data => barGraphData = data; );
 
 var doughnutGraphData = [
