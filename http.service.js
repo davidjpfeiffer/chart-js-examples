@@ -1,4 +1,4 @@
-window.app.httpService = (function () {
+window.httpService = (function () {
     'use strict';
 
     var httpService = {
