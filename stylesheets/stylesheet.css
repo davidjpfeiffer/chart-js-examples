@@ -16,7 +16,7 @@ a {
     text-decoration: underline; }
 
 canvas {
-  width: 500px; }
+  width: 100% }
 
 .btn {
   display: inline-block;
@@ -203,6 +203,7 @@ canvas {
 
 .main-content {
   text-align: center;
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 64em) {
