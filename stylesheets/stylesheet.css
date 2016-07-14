@@ -195,10 +195,10 @@ canvas {
     padding: 0;
     margin-bottom: 1rem; }
 .main-content hr {
-  height: 2px;
+  height: 4px;
   padding: 0;
   margin: 1rem 0;
-  background-color: #eff0f1;
+  background-color: #eee;
   border: 0; }
 
 .main-content {
