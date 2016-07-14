@@ -15,9 +15,6 @@ a {
   a:hover {
     text-decoration: underline; }
 
-canvas {
-  width: 100% }
-
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -195,10 +192,10 @@ canvas {
     padding: 0;
     margin-bottom: 1rem; }
 .main-content hr {
-  height: 4px;
+  height: 1px;
   padding: 0;
   margin: 1rem 0;
-  background-color: #eee;
+  background-color: #eff0f1;
   border: 0; }
 
 .main-content {
