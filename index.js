@@ -1,6 +1,6 @@
 var randomScalingFactor = function() {
-      return Math.round(Math.random() * 100)
-  };
+	return Math.round(Math.random() * 100)
+};
 
 var barGraphData = {
 	labels : ["January","February","March","April","May","June","July"],
@@ -20,7 +20,7 @@ var barGraphData = {
 			data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
 		}
 	]
-};
+}
 
   var doughnutGraphData = [
       {
@@ -53,7 +53,7 @@ var barGraphData = {
           highlight: "#616774",
           label: "Dark Grey"
       }
-  ];
+  ]
 
   var lineChartData = {
       labels : ["January","February","March","April","May","June","July"],
@@ -79,7 +79,7 @@ var barGraphData = {
               data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
           }
       ]
-};
+}
 
   var pieGraphData = [
       {
@@ -112,7 +112,7 @@ var barGraphData = {
           highlight: "#616774",
           label: "Dark Grey"
       }
-  ];
+  ]
 
   var polarAreaGraphData = [
       {
@@ -145,7 +145,7 @@ var barGraphData = {
           highlight: "#616774",
           label: "Dark Grey"
       }
-  ];
+]
 
 var radarGraphData = {
 	labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
@@ -171,24 +171,24 @@ var radarGraphData = {
 			data: [28,48,40,19,96,27,100]
 		}
 	]
+}
+
+var barGraph = document.getElementById("bar-graph-canvas").getContext("2d");
+var doughnutGraph = document.getElementById("doughnut-graph-canvas").getContext("2d");
+var lineGraph = document.getElementById("line-graph-canvas").getContext("2d");
+var pieGraph = document.getElementById("pie-graph-canvas").getContext("2d");
+var polarAreaGraph = document.getElementById("polar-area-graph-canvas").getContext("2d");
+var radarGraph = document.getElementById("radar-graph-canvas").getContext("2d");
+
+var graphOptions = {
+	responsive : true
 };
-
-  var barGraph = document.getElementById("bar-graph-canvas").getContext("2d");
-  var doughnutGraph = document.getElementById("doughnut-graph-canvas").getContext("2d");
-  var lineGraph = document.getElementById("line-graph-canvas").getContext("2d");
-  var pieGraph = document.getElementById("pie-graph-canvas").getContext("2d");
-  var polarAreaGraph = document.getElementById("polar-area-graph-canvas").getContext("2d");
-  var radarGraph = document.getElementById("radar-graph-canvas").getContext("2d");
-
-  var graphOptions = {
-      responsive : true
-  };
 
 window.onload = function() {
 	window.barGraph = new Chart(barGraph).Bar(barGraphData, graphOptions);
-      window.doughnutGraph = new Chart(doughnutGraph).Bar(doughnutGraphData, graphOptions);
-      window.lineGraph = new Chart(lineGraph).Bar(lineGraphData, graphOptions);
-      window.pieGraph = new Chart(pieGraph).Bar(pieGraphData, graphOptions);
-      window.polarAreaGraph = new Chart(polarAreaGraph).Bar(polarAreaGraphData, graphOptions);
-      window.radarGraph = new Chart(radarGraph).Bar(radarGraphData, graphOptions);
+	window.doughnutGraph = new Chart(doughnutGraph).Bar(doughnutGraphData, graphOptions);
+	window.lineGraph = new Chart(lineGraph).Bar(lineGraphData, graphOptions);
+	window.pieGraph = new Chart(pieGraph).Bar(pieGraphData, graphOptions);
+	window.polarAreaGraph = new Chart(polarAreaGraph).Bar(polarAreaGraphData, graphOptions);
+	window.radarGraph = new Chart(radarGraph).Bar(radarGraphData, graphOptions);
 }
