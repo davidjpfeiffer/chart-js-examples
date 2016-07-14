@@ -1,6 +1,0 @@
-{
-  "name": "chart-js-examples",
-  "tagline": "Graph examples from http://www.chartjs.org/",
-  "body": "### Bar Graph\r\n\r\n### Doughnut Graph\r\n\r\n### Line Graph\r\n\r\n### Pie Graph\r\n\r\n### Polar Area Graph\r\n\r\n### Radar Graph\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
