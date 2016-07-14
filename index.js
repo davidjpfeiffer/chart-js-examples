@@ -4,7 +4,7 @@ var randomScalingFactor = function() {
 
 var barGraphData;
 
-app.httpService.get('barGraphData.json').then(data => barGraphData = data; );
+app.httpService.get('barGraphData.json').then(data => { barGraphData = data; } );
 
 var doughnutGraphData = [
     {
