@@ -41,4 +41,4 @@ window.httpService = (function () {
         }
     }
 
-}());
+} ());
