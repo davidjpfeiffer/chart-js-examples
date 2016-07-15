@@ -34,6 +34,10 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3); }
 
+.btn:focus {
+    outline: none;
+}
+
 @media screen and (min-width: 64em) {
   .btn {
     padding: 0.75rem 1rem; } }
@@ -239,3 +243,53 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.chart {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.chart-header .btn {
+    color: #888;
+    border: 1px solid #eee;
+}
+
+.chart-header .btn:hover {
+    background-color: #eee;
+}
+
+@media screen and (max-width: 42em) {
+    .chart-header {
+        text-align: center;
+    }
+
+    .chart-header a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 42em) {
+    .chart-header {
+        overflow: auto;
+    }
+
+    .chart-header a {
+        float: left;
+        font-size: 1.2em;
+        padding: 1px 0;
+    }
+
+    .chart-header button {
+        float: right;
+        margin-bottom: 0;
+        padding: 8px 14px;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .chart-header a {
+        font-size: 1.5em;
+    }
+}
+

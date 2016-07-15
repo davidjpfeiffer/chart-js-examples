@@ -1,6 +1,6 @@
 (function () {
 
-    var barGraphData = {
+    var barChartData = {
         "labels": ["January", "February", "March", "April", "May", "June", "July"],
         "datasets": [
             {
@@ -20,7 +20,7 @@
         ]
     };
 
-    var doughnutGraphData = [
+    var doughnutChartData = [
         {
             value: window.utilityService.getRandomScalingFactor(),
             color: "#F7464A",
@@ -53,7 +53,7 @@
         }
     ];
 
-    var lineGraphData = {
+    var lineChartData = {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [
             {
@@ -79,7 +79,7 @@
         ]
     };
 
-    var pieGraphData = [
+    var pieChartData = [
         {
             value: window.utilityService.getRandomScalingFactor(),
             color: "#F7464A",
@@ -112,7 +112,7 @@
         }
     ];
 
-    var polarAreaGraphData = [
+    var polarAreaChartData = [
         {
             value: window.utilityService.getRandomScalingFactor(),
             color: "#F7464A",
@@ -145,7 +145,7 @@
         }
     ];
 
-    var radarGraphData = {
+    var radarChartData = {
         labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
         datasets: [
             {
@@ -171,22 +171,22 @@
         ]
     };
 
-    var graphOptions = { responsive: true };
+    var chartOptions = { responsive: true };
 
-    var barGraph = document.getElementById("bar-graph-canvas").getContext("2d");
-    var doughnutGraph = document.getElementById("doughnut-graph-canvas").getContext("2d");
-    var lineGraph = document.getElementById("line-graph-canvas").getContext("2d");
-    var pieGraph = document.getElementById("pie-graph-canvas").getContext("2d");
-    var polarAreaGraph = document.getElementById("polar-area-graph-canvas").getContext("2d");
-    var radarGraph = document.getElementById("radar-graph-canvas").getContext("2d");
+    var barChart = document.getElementById("bar-chart-canvas").getContext("2d");
+    var doughnutChart = document.getElementById("doughnut-chart-canvas").getContext("2d");
+    var lineChart = document.getElementById("line-chart-canvas").getContext("2d");
+    var pieChart = document.getElementById("pie-chart-canvas").getContext("2d");
+    var polarAreaChart = document.getElementById("polar-area-chart-canvas").getContext("2d");
+    var radarChart = document.getElementById("radar-chart-canvas").getContext("2d");
 
     window.onload = function () {
-        new Chart(barGraph).Bar(barGraphData, graphOptions);
-        new Chart(doughnutGraph).Doughnut(doughnutGraphData, graphOptions);
-        new Chart(lineGraph).Line(lineGraphData, graphOptions);
-        new Chart(pieGraph).Pie(pieGraphData, graphOptions);
-        new Chart(polarAreaGraph).PolarArea(polarAreaGraphData, graphOptions);
-        new Chart(radarGraph).Radar(radarGraphData, graphOptions);
+        new Chart(barChart).Bar(barChartData, chartOptions);
+        new Chart(doughnutChart).Doughnut(doughnutChartData, chartOptions);
+        new Chart(lineChart).Line(lineChartData, chartOptions);
+        new Chart(pieChart).Pie(pieChartData, chartOptions);
+        new Chart(polarAreaChart).PolarArea(polarAreaChartData, chartOptions);
+        new Chart(radarChart).Radar(radarChartData, chartOptions);
     };
 
 } ());

@@ -1,7 +1,7 @@
 window.utilityService = (function () {
     'use strict';
 
-    var graphDataSize = 7;
+    var chartDataSize = 7;
 
     var utilityService = {
         getRandomScalingFactor: getRandomScalingFactor,
@@ -13,7 +13,7 @@ window.utilityService = (function () {
     function getRandomDataArray() {
         var array = [];
 
-        for (var i = 0; i < graphDataSize; i++) {
+        for (var i = 0; i < chartDataSize; i++) {
             array.push(getRandomScalingFactor());
         }
 
