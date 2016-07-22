@@ -1,0 +1,41 @@
+.chart {
+    padding: 20px 40px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.chart-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-header h3 {
+    margin-bottom: 20px;
+
+    a {
+      display: block;
+    }
+}
+
+@include respond-to($sm-break) {
+    .chart-header {
+        @include clearfix;
+        text-align: left;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .chart-header h3 {
+      font-size: 31px;
+        float: left;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .chart-header .chart-options {
+        float: right;
+        margin-bottom: 0;
+    }
+}
