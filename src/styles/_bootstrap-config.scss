@@ -1,0 +1,37 @@
+/* Bootstrap Menu Bar Configurations */
+
+body {
+  padding-top: 51px;
+}
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+}
+
+/* Bootstrap Jumbotron Configurations */
+
+.jumbotron {
+  margin-bottom: 20px;
+}
+
+/* Bootstrap Button Configurations */
+
+.btn {
+  display: block;
+  width: 100%;
+}
+
+.btn + .btn {
+  margin-top: 10px;
+}
+
+@include respond-to($sm-break) {
+  .btn {
+    display: inline-block;
+    width: initial;
+  }
+
+  .btn + .btn {
+    margin-top: initial;
+  }
+}

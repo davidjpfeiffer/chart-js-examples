@@ -1,0 +1,33 @@
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 20px 0;
+  font-weight: bold;
+
+  a {
+    padding: 8px 0;
+    display: block;
+  }
+
+  p, h6 {
+    margin: 0;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h6 {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 4px solid #333;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  [class^="col"] {
+    padding: 20px;
+  }
+}

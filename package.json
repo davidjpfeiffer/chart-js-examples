@@ -1,0 +1,38 @@
+{
+  "name": "chart-js-examples",
+  "version": "1.0.0",
+  "description": "A collection of Chart JS examples",
+  "main": "gulpfile.js",
+  "scripts": {
+    "serve": "gulp build--dev && gulp watch",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "setupsubtree": "git add dist && git commit -m \"Initial dist subtree commit\" && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidjpfeiffer/chart-js-examples.git"
+  },
+  "author": "David J Pfeiffer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidjpfeiffer/chart-js-examples/issues"
+  },
+  "homepage": "https://davidjpfeiffer.github.io/chart-js-examples",
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^1.3.0",
+    "gulp-clean-css": "^2.0.7",
+    "gulp-file": "^0.3.0",
+    "gulp-help": "^1.6.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-inline-source": "^2.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sitemap": "^4.1.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.1.0",
+    "run-sequence": "^1.1.5"
+  }
+}
