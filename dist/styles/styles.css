@@ -1,0 +1,131 @@
+/* Bootstrap Menu Bar Configurations */
+body {
+  padding-top: 51px; }
+
+.navbar-fixed-top {
+  margin-bottom: 0; }
+
+/* Bootstrap Jumbotron Configurations */
+.jumbotron {
+  margin-bottom: 20px; }
+
+/* Bootstrap Button Configurations */
+.btn {
+  display: block;
+  width: 100%; }
+
+.btn + .btn {
+  margin-top: 10px; }
+
+@media (min-width: 48em) {
+  .btn {
+    display: inline-block;
+    width: initial; }
+  .btn + .btn {
+    margin-top: initial; } }
+
+/* Bootstrap General Configurations */
+.container {
+  max-width: 1000px; }
+
+body {
+  font-family: 'Roboto', serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  margin-top: 10px; }
+
+header {
+  background-color: #159957;
+  text-align: center;
+  padding: 40px;
+  color: #ffffff;
+  margin-bottom: 20px; }
+  header h1 {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px; }
+  header p {
+    margin-bottom: 20px; }
+  @media (min-width: 62em) {
+    header {
+      padding: 50px; }
+      header h1 {
+        font-size: 30px;
+        margin-bottom: 30px; }
+      header p {
+        font-size: 15px;
+        margin-bottom: 30px; } }
+  @media (min-width: 75em) {
+    header {
+      padding: 70px; }
+      header h1 {
+        font-size: 35px; }
+      header p {
+        font-size: 20px; } }
+
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 20px 0;
+  font-weight: bold; }
+  footer a {
+    padding: 8px 0;
+    display: block; }
+  footer p, footer h6 {
+    margin: 0; }
+  footer p {
+    font-size: 15px; }
+  footer h6 {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 4px solid #333; }
+  footer a:hover {
+    text-decoration: none; }
+  footer [class^="col"] {
+    padding: 20px; }
+
+.call-to-action {
+  background-color: #159957;
+  text-align: center;
+  padding: 35px; }
+  .call-to-action h5 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 0; }
+
+.chart {
+  padding: 20px 40px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-radius: 8px; }
+
+.chart-header {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.chart-header h3 {
+  margin-bottom: 20px; }
+  .chart-header h3 a {
+    display: block; }
+
+@media (min-width: 48em) {
+  .chart-header {
+    text-align: left;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee; }
+    .chart-header:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .chart-header h3 {
+    font-size: 31px;
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .chart-header .chart-options {
+    float: right;
+    margin-bottom: 0; } }
