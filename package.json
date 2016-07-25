@@ -4,9 +4,9 @@
   "description": "A collection of Chart JS examples",
   "main": "gulpfile.js",
   "scripts": {
-    "build-dev": "gulp build--dev",
-    "build-prod": "gulp build--prod",
-    "serve": "gulp build--dev && gulp watch",
+    "build-dev": "gulp build-dev",
+    "build-prod": "gulp build-prod",
+    "serve": "gulp build-dev && gulp watch",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
