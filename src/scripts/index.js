@@ -3,51 +3,115 @@
 
   var chartOptions = { responsive: true };
 
-  var barChart = document.getElementById("bar-chart-canvas").getContext("2d");
-  var doughnutChart = document.getElementById("doughnut-chart-canvas").getContext("2d");
-  var lineChart = document.getElementById("line-chart-canvas").getContext("2d");
-  var pieChart = document.getElementById("pie-chart-canvas").getContext("2d");
-  var polarAreaChart = document.getElementById("polar-area-chart-canvas").getContext("2d");
-  var radarChart = document.getElementById("radar-chart-canvas").getContext("2d");
+  var barChart;
+  var doughnutChart;
+  var lineChart;
+  var pieChart;
+  var polarAreaChart;
+  var radarChart;
 
-  function loadBarChart() {
-    new Chart(barChart).Bar(window.dataService.getBarChartData(), chartOptions);
+  var barChartElement = document.getElementById("bar-chart-canvas").getContext("2d");
+  var doughnutChartElement = document.getElementById("doughnut-chart-canvas").getContext("2d");
+  var lineChartElement = document.getElementById("line-chart-canvas").getContext("2d");
+  var pieChartElement = document.getElementById("pie-chart-canvas").getContext("2d");
+  var polarAreaChartElement = document.getElementById("polar-area-chart-canvas").getContext("2d");
+  var radarChartElement = document.getElementById("radar-chart-canvas").getContext("2d");
+
+  function loadAllCharts() {
+    barChart = new Chart(barChartElement).Bar(window.dataService.getBarChartData(), chartOptions);
+    doughnutChart = new Chart(doughnutChartElement).Doughnut(window.dataService.getDoughnutChartData(), chartOptions);
+    lineChart = new Chart(lineChartElement).Line(window.dataService.getLineChartData(), chartOptions);
+    pieChart = new Chart(pieChartElement).Pie(window.dataService.getPieChartData(), chartOptions);
+    polarAreaChart = new Chart(polarAreaChartElement).PolarArea(window.dataService.getPolarAreaChartData(), chartOptions);
+    radarChart = new Chart(radarChartElement).Radar(window.dataService.getRadarChartData(), chartOptions);
   }
 
-  function loadDoughnutChart() {
-    new Chart(doughnutChart).Doughnut(window.dataService.getDoughnutChartData(), chartOptions);
+  function reloadBarChartData() {
+    for (var i = 0; i < barChart.datasets.length; i++) {
+      for (var j = 0; j < barChart.datasets[i].bars.length; j++) {
+        barChart.datasets[i].bars[j].value = window.utilityService.getRandomScalingFactor();
+      }
+    }
+
+    barChart.update();
   }
 
-  function loadLineChart() {
-    new Chart(lineChart).Line(window.dataService.getLineChartData(), chartOptions);
+  function reloadDoughnutChartData() {
+    for (var i = 0; i < doughnutChart.segments.length; i++) {
+      doughnutChart.segments[i].value = window.utilityService.getRandomScalingFactor();
+    }
+
+    doughnutChart.update();
   }
 
-  function loadPieChart() {
-    new Chart(pieChart).Pie(window.dataService.getPieChartData(), chartOptions);
+  function reloadLineChartData() {
+    for (var i = 0; i < lineChart.datasets.length; i++) {
+      for (var j = 0; j < lineChart.datasets[i].points.length; j++) {
+        lineChart.datasets[i].points[j].value = window.utilityService.getRandomScalingFactor();
+      }
+    }
+
+    lineChart.update();
   }
 
-  function loadPolarAreaChart() {
-    new Chart(polarAreaChart).PolarArea(window.dataService.getPolarAreaChartData(), chartOptions);
+  function reloadPieChartData() {
+    for (var i = 0; i < pieChart.segments.length; i++) {
+      pieChart.segments[i].value = window.utilityService.getRandomScalingFactor();
+    }
+
+    pieChart.update();
   }
 
-  function loadRadarChart() {
-    new Chart(radarChart).Radar(window.dataService.getRadarChartData(), chartOptions);
+  function reloadPolarAreaChartData() {
+    for (var i = 0; i < polarAreaChart.segments.length; i++) {
+      polarAreaChart.segments[i].value = window.utilityService.getRandomScalingFactor();
+    }
+
+    polarAreaChart.update();
+  }
+
+  function reloadRadarChartData() {
+    for (var i = 0; i < radarChart.datasets.length; i++) {
+      for (var j = 0; j < radarChart.datasets[i].points.length; j++) {
+        radarChart.datasets[i].points[j].value = window.utilityService.getRandomScalingFactor();
+      }
+    }
+
+    radarChart.update();
+  }
+
+  function scrollToChart(chart) {
+    $('html, body').animate({ scrollTop: $(chart + '-wrapper').offset().top - 70 }, 'slow');
+  }
+
+  $('.js-reload-bar-chart-btn').on('click', reloadBarChartData);
+  $('.js-reload-doughnut-chart-btn').on('click', reloadDoughnutChartData);
+  $('.js-reload-line-chart-btn').on('click', reloadLineChartData);
+  $('.js-reload-pie-chart-btn').on('click', reloadPieChartData);
+  $('.js-reload-polar-area-chart-btn').on('click', reloadPolarAreaChartData);
+  $('.js-reload-radar-chart-btn').on('click', reloadRadarChartData);
+
+  $('#bar-chart-header').on('click', function () { scrollToChart('#bar-chart'); });
+  $('#doughnut-chart-header').on('click', function () { scrollToChart('#doughnut-chart'); });
+  $('#line-chart-header').on('click', function () { scrollToChart('#line-chart'); });
+  $('#pie-chart-header').on('click', function () { scrollToChart('#pie-chart'); });
+  $('#polar-area-chart-header').on('click', function () { scrollToChart('#polar-area-chart'); });
+  $('#radar-chart-header').on('click', function () { scrollToChart('#radar-chart'); });
+
+  function getCurrentChart() {
+    var params = window.location.href.split('/');
+
+    for (var i = 0; i < params.length; i++) {
+      if (params[i][0] == '#') return params[i];
+    }
+
+    return null;
   }
 
   window.onload = function () {
-    loadBarChart();
-    loadDoughnutChart();
-    loadLineChart();
-    loadPieChart();
-    loadPolarAreaChart();
-    loadRadarChart();
+    loadAllCharts();
+    var currentChart = getCurrentChart();
+    if (currentChart) scrollToChart(currentChart);
   };
-
-  $('.js-reload-bar-chart-btn').on('click', loadBarChart);
-  $('.js-reload-doughnut-chart-btn').on('click', loadDoughnutChart);
-  $('.js-reload-line-chart-btn').on('click', loadLineChart);
-  $('.js-reload-pie-chart-btn').on('click', loadPieChart);
-  $('.js-reload-polar-area-chart-btn').on('click', loadPolarAreaChart);
-  $('.js-reload-radar-chart-btn').on('click', loadRadarChart);
 
 } ());

@@ -45,54 +45,64 @@
     <a href="https://github.com/davidjpfeiffer/chart-js-examples/zipball/master" class="btn btn-primary btn-lg">Download Zip</a>
   </header>
   <main class="container">
-    <div class="chart">
+    <div class="chart" id="bar-chart-wrapper">
       <div class="chart-header">
-        <h3><a id="bar-chart" class="anchor" href="#bar-chart" aria-hidden="true">Bar Chart</a></h3>
+        <h3><a id="bar-chart-header" href="#bar-chart">Bar Chart</a></h3>
         <div class="chart-options">
-          <button class="btn btn-default">View Code</button>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#bar-chart-code-modal">View Code</button>
           <button class="btn btn-default js-reload-bar-chart-btn">Reload Data</button>
         </div>
       </div>
       <canvas id="bar-chart-canvas"></canvas>
     </div>
-    <div class="chart">
-      <h3 class="chart-header">
-        <a id="doughnut-chart" class="anchor" href="#doughnut-chart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">Doughnut Chart</span></a>
-        <button class="btn btn-default">View Code</button>
-        <button class="btn btn-default js-reload-doughnut-chart-btn">Reload Data</button>
-      </h3>
+    <div class="chart" id="doughnut-chart-wrapper">
+      <div class="chart-header">
+        <h3><a id="doughnut-chart-header" href="#doughnut-chart">Doughnut Chart</a></h3>
+        <div class="chart-options">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#doughnut-chart-code-modal">View Code</button>
+          <button class="btn btn-default js-reload-doughnut-chart-btn">Reload Data</button>
+        </div>
+      </div>
       <canvas id="doughnut-chart-canvas"></canvas>
     </div>
-    <div class="chart">
-      <h3 class="chart-header">
-        <a id="line-chart" class="anchor" href="#line-chart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">Line Chart</span></a>
-        <button class="btn btn-default">View Code</button>
-        <button class="btn btn-default js-reload-line-chart-btn">Reload Data</button>
-      </h3>
+    <div class="chart" id="line-chart-wrapper">
+      <div class="chart-header">
+        <h3><a id="line-chart-header" href="#line-chart">Line Chart</a></h3>
+        <div class="chart-options">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#line-chart-code-modal">View Code</button>
+          <button class="btn btn-default js-reload-line-chart-btn">Reload Data</button>
+        </div>
+      </div>
       <canvas id="line-chart-canvas"></canvas>
     </div>
-    <div class="chart">
-      <h3 class="chart-header">
-        <a id="pie-chart" class="anchor" href="#pie-chart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">Pie Chart</span></a>
-        <button class="btn btn-default">View Code</button>
-        <button class="btn btn-default js-reload-pie-chart-btn">Reload Data</button>
-      </h3>
+    <div class="chart" id="pie-chart-wrapper">
+      <div class="chart-header">
+        <h3><a id="pie-chart-header" href="#pie-chart">Pie Chart</a></h3>
+        <div class="chart-options">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#pie-chart-code-modal">View Code</button>
+          <button class="btn btn-default js-reload-pie-chart-btn">Reload Data</button>
+        </div>
+      </div>
       <canvas id="pie-chart-canvas"></canvas>
     </div>
-    <div class="chart">
-      <h3 class="chart-header">
-        <a id="polar-area-chart" class="anchor" href="#polar-area-chart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">Polar Area Chart</span></a>
-        <button class="btn btn-default">View Code</button>
-        <button class="btn btn-default js-reload-polar-area-chart-btn">Reload Data</button>
-      </h3>
+    <div class="chart" id="polar-area-chart-wrapper">
+      <div class="chart-header">
+        <h3><a id="polar-area-chart-header" href="#polar-area-chart">Polar Area Chart</a></h3>
+        <div class="chart-options">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#polar-area-chart-code-modal">View Code</button>
+          <button class="btn btn-default js-reload-polar-area-chart-btn">Reload Data</button>
+        </div>
+      </div>
       <canvas id="polar-area-chart-canvas"></canvas>
     </div>
-    <div class="chart">
-      <h3 class="chart-header">
-        <a id="radar-chart" class="anchor" href="#radar-chart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link">Radar Chart</span></a>
-        <button class="btn btn-default">View Code</button>
-        <button class="btn btn-default js-reload-radar-chart-btn">Reload Data</button>
-      </h3>
+    <div class="chart" id="radar-chart-wrapper">
+      <div class="chart-header">
+        <h3><a id="radar-chart-header" href="#radar-chart">Radar Chart</a></h3>
+        <div class="chart-options">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#radar-chart-code-modal">View Code</button>
+          <button class="btn btn-default js-reload-radar-chart-btn">Reload Data</button>
+        </div>
+      </div>
       <canvas id="radar-chart-canvas"></canvas>
     </div>
   </main>
@@ -104,13 +114,13 @@
     <div class="container">
       <div class="col-sm-6 col-md-3">
         <h6>Chart JS</h6>
-        <p><a href="http://www.chartjs.org">Official Project Website</a></p>
+        <p><a href="http://www.chartjs.org">Official Website</a></p>
         <p><a href="http://www.chartjs.org/docs">Documentation</a></p>
-        <p><a href="https://github.com/chartjs/Chart.js">Project GitHub Page</a></p>
+        <p><a href="https://github.com/chartjs/Chart.js">GitHub Page</a></p>
       </div>
       <div class="col-sm-6 col-md-3">
         <h6>Project</h6>
-        <p><a href="https://github.com/davidjpfeiffer/chart-js-examples">Project GitHub Page</a></p>
+        <p><a href="https://github.com/davidjpfeiffer/chart-js-examples">GitHub Page</a></p>
         <p><a href="https://github.com/davidjpfeiffer/chart-js-examples/issues">Report an Issue</a></p>
         <p><a href="https://github.com/davidjpfeiffer/chart-js-examples#getting-started">Getting Started</a></p>
       </div>
@@ -122,6 +132,102 @@
       </div>
     </div>
   </footer>
+  <div class="modal fade" id="bar-chart-code-modal" tabindex="-1" role="dialog" aria-labelledby="Bar Chart Code">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="bar-chart-code-modal-title">Bar Chart Code</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="doughnut-chart-code-modal" tabindex="-1" role="dialog" aria-labelledby="Doughnut Chart Code">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="doughnut-chart-code-modal-title">Doughnut Chart Code</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="line-chart-code-modal" tabindex="-1" role="dialog" aria-labelledby="Line Chart Code">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="line-chart-code-modal-title">Line Chart Code</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="pie-chart-code-modal" tabindex="-1" role="dialog" aria-labelledby="Pie Chart Code">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="pie-chart-code-modal-title">Pie Chart Code</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="polar-area-chart-code-modal" tabindex="-1" role="dialog" aria-labelledby="Polar Area Chart Code">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="polar-area-chart-code-modal-title">Polar Chart Code</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="radar-chart-code-modal" tabindex="-1" role="dialog" aria-labelledby="Radar Chart Code">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="radar-chart-code-modal-title">Radar Chart Code</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--build:js scripts/scripts.min.js async-->
   <script src="scripts/services/utility.service.js"></script>
   <script src="scripts/services/data.service.js"></script>
